@@ -10,6 +10,7 @@ public class PowerOfThree {
      * @param args
      */
     public static void main(String[] args) {
+        System.out.println(getMaxPowerOfThree());
         System.out.println(isPowerOfThree(81));
         System.out.println(isPowerOfThree(80));
     }
