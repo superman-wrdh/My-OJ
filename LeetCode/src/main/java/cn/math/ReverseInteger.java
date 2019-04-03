@@ -36,11 +36,37 @@ public class ReverseInteger {
         return result;
     }
 
+    public int reverse2(int x) {
+        int po = 1;
+        if (x < 0) {
+            po = -1;
+            x = -x;
+        }
+        int result = 0;
+        int power = -1;
+        int cx = x;
+        while (cx != 0) {
+            cx = cx / 10;
+            power++;
+        }
+        boolean zero = false;
+        while (x != 0) {
+            int tail = x % 10;
+            if ((long) tail * (long) Math.pow(10, power) > Integer.MAX_VALUE || (long) tail * (long) Math.pow(10, power) < Integer.MIN_VALUE) {
+                zero = true;
+                break;
+            }
+            result = result + tail * (int) Math.pow(10, power);
+            power--;
+            x = x / 10;
+        }
+        return (zero ? 0 : result) * po;
+
+    }
 
     public static void main(String[] args) {
-//        System.out.println(new ReverseInteger().reverse(1534236469));
-//        System.out.println(new ReverseInteger().reverse2(1534236469));
+        System.out.println(new ReverseInteger().reverse(1563847412));
+        System.out.println(new ReverseInteger().reverse2(1563847412));
         System.out.println(Long.MAX_VALUE);
-        System.out.println(Integer.MAX_VALUE);
     }
 }
