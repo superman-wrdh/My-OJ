@@ -2,6 +2,7 @@ package cn.str;
 
 /**
  * Created by super on 2019/5/23
+ * https://leetcode.com/problems/longest-common-prefix/
  */
 public class LongestCommonPrefix {
     public String longestCommonPrefix(String[] strs) {
