@@ -4,7 +4,7 @@ package cn.tree;
  * Created by super on 2019/5/26
  * https://leetcode.com/problems/same-tree/
  */
-public class IsSameTree {
+public class SameTree {
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if (null == p && null == q) return true;
         else if (null == p || null == q) {
