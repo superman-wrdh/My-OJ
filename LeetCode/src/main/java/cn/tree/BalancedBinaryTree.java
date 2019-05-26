@@ -2,6 +2,8 @@ package cn.tree;
 
 /**
  * Created by super on 2019/5/26
+ * https://leetcode.com/problems/balanced-binary-tree/
+ *
  */
 public class BalancedBinaryTree {
     public boolean isBalanced(TreeNode root) {
