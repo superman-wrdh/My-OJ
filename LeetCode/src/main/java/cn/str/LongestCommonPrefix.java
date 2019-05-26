@@ -22,3 +22,4 @@ public class LongestCommonPrefix {
         System.out.println(new LongestCommonPrefix().longestCommonPrefix(s));
     }
 }
+
