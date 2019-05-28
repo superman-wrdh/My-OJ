@@ -11,11 +11,12 @@ public class MissingNumber {
         int min = Arrays.stream(nums).min().getAsInt();
         int max = Arrays.stream(nums).max().getAsInt();
         int sum = Arrays.stream(nums).sum();
-        return ((max+min)*nums.length+1) / 2 -sum;
+        int ps = (max + min) * (nums.length + 1) / 2 -sum;
+        return ps;
     }
 
     public static void main(String[] args) {
-        int arr[] = {0,1,3};
+        int arr[] = {0, 1, 3};
         System.out.println(new MissingNumber().missingNumber(arr));
     }
 }
