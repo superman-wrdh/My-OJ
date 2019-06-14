@@ -23,4 +23,12 @@ public class ClimbingStairs {
         return value;
     }
 
+    public static void main(String[] args) {
+        long s = System.currentTimeMillis();
+        for (int i = 1; i <= 30; i++) {
+            System.out.println("n = " + i + " , value =" + new ClimbingStairs().climbStairs(i));
+            System.out.println("take times " + (System.currentTimeMillis() - s));
+        }
+    }
+
 }
