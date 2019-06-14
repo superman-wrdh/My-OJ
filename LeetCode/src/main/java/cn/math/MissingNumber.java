@@ -8,11 +8,14 @@ import java.util.Arrays;
  */
 public class MissingNumber {
     public int missingNumber(int[] nums) {
+        if (nums.length == 1) {
+            if (nums[0] == 0) return 1;
+            return nums[0] + 1;
+        }
         int min = Arrays.stream(nums).min().getAsInt();
         int max = Arrays.stream(nums).max().getAsInt();
         int sum = Arrays.stream(nums).sum();
-        int ps = (max + min) * (nums.length + 1) / 2 -sum;
-        return ps;
+        return (max + min) * (nums.length + 1) / 2 - sum;
     }
 
     public static void main(String[] args) {

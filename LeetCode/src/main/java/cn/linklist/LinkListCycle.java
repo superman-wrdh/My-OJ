@@ -6,7 +6,7 @@ package cn.linklist;
  * 循坏链表判断
  * 思路 将链表next指向同一个temp节点  head向前移动  重复操作
  * 若构成闭合 head移动到环时刻 head.next = temp
- * 
+ *
  */
 public class LinkListCycle {
     public boolean hasCycle(ListNode head) {
