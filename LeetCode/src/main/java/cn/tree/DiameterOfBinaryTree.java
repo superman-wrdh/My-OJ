@@ -1,5 +1,6 @@
 package cn.tree;
 
+//https://leetcode.com/problems/diameter-of-binary-tree/
 public class DiameterOfBinaryTree {
     public int diameterOfBinaryTree(TreeNode root) {
         if (root == null) return 0;
