@@ -70,8 +70,12 @@ class SolutionBinaryTreeLevelOrderTraversal{
             TreeNode node = queen.remove();
             if(node != null){
                 sublist.add(node.getVal());
-                if(node.getLeft() != null){ queen.add(node.getLeft()); }
-                if(node.getRight() != null){ queen.add(node.getRight()); }
+                if(node.getLeft() != null){
+                    queen.add(node.getLeft());
+                }
+                if(node.getRight() != null){
+                    queen.add(node.getRight());
+                }
             }else {
                 list.add(sublist);
                 if(queen.size() > 0){
