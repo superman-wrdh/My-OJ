@@ -21,7 +21,7 @@ package cn.tree;
  * 	     3
  * 	    / \
  * 	   4   5
- * 	  / \   \ 
+ * 	  / \   \
  * 	 5   4   7
  */
 public class MergeTwoBinaryTrees {
