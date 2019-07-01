@@ -28,6 +28,13 @@ public class SumofRootToLeafBinaryNumbers {
     }
 
     public static void main(String[] args) {
+        /**
+         *        1
+         *      /   \
+         *     0     1
+         *    /\    / \
+         *   0  1  0   1
+         */
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(0);
         root.right = new TreeNode(1);
