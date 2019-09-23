@@ -20,34 +20,36 @@ public class SumofLeftLeaves {
     /**
      * [3,9,20,null,null,15,7]
      * 3
+     * /  \
+     * 9   20
      * / \
-     * 9  20
-     * / \
-     * 15  7
+     * 15   7
      *
      * @param args
      */
     public static void main(String[] args) {
+        /**
+         *    1
+         *   2 3
+         *  4   5
+         */
 
 
     }
 
     public int sumOfLeftLeaves(TreeNode root) {
-        if(root==null)return 0;
+        if (root == null) return 0;
         return leftSum(root.left, true) + leftSum(root.right, false);
     }
 
     public int leftSum(TreeNode root, boolean isLeft) {
         if (root == null) return 0;
         int sum = 0;
-        if (isLeft) {
-            if (root.left == null || root.right == null) {
-                return sum + root.val;
-            }
-        } else {
-            if (root.left != null) return sum + leftSum(root.left, true);
-            if (root.right != null) return sum + leftSum(root.right, false);
+        if (isLeft && (root.left == null && root.right == null)) {
+            sum = sum + root.val;
         }
+        sum = sum + leftSum(root.left, true) + leftSum(root.right, false);
+
         return sum;
     }
 
