@@ -39,16 +39,16 @@ public class SumofLeftLeaves {
 
     public int sumOfLeftLeaves(TreeNode root) {
         if (root == null) return 0;
-        return leftSum(root.left, true) + leftSum(root.right, false);
+        return sumOfLeftLeaves(root.left, true) + sumOfLeftLeaves(root.right, false);
     }
 
-    public int leftSum(TreeNode root, boolean isLeft) {
+    public int sumOfLeftLeaves(TreeNode root, boolean isLeft) {
         if (root == null) return 0;
         int sum = 0;
         if (isLeft && (root.left == null && root.right == null)) {
             sum = sum + root.val;
         }
-        sum = sum + leftSum(root.left, true) + leftSum(root.right, false);
+        sum = sum + sumOfLeftLeaves(root.left, true) + sumOfLeftLeaves(root.right, false);
 
         return sum;
     }
