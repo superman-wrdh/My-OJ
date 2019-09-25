@@ -1,7 +1,5 @@
 package cn.tree;
 
-import sun.reflect.generics.tree.Tree;
-
 /**
  * https://leetcode.com/problems/sum-of-left-leaves/
  * Find the sum of all left leaves in a given binary tree.
