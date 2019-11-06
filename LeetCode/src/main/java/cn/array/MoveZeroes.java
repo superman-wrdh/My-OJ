@@ -18,7 +18,7 @@ public class MoveZeroes {
      *
      */
     public static void main(String[] args) {
-
+        //测试用例
     }
 
     public void moveZeroes(int[] nums) {
