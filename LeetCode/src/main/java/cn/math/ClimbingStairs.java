@@ -29,6 +29,7 @@ public class ClimbingStairs {
             System.out.println("n = " + i + " , value =" + new ClimbingStairs().climbStairs(i));
             System.out.println("take times " + (System.currentTimeMillis() - s));
         }
+
     }
 
 }
