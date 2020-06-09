@@ -2,14 +2,18 @@ package cn.hc.algorithm.math;
 
 public class QueenN {
     int count = 0;
+    int N = 0;
 
     public static void main(String[] args) {
         System.out.println(new QueenN().totalNQueens(8));
-        System.out.println(new QueenN().totalNQueens(9));
+        //System.out.println(new QueenN().totalNQueens(9));
     }
 
     int totalNQueens(int n) {
-        backTracking(n, 0, new int[n]);
+        this.N = n;
+        int[] table = new int[n];
+        backTracking(n, 0, table);
+        //print_table(table);
         return count;
     }
 
@@ -17,6 +21,9 @@ public class QueenN {
         //是否在所有n行里摆好了皇后
         if (row == n) {
             count++; //找到了新的摆放方法
+            System.out.println("--");
+            print_table(columns);
+            System.out.println("--");
             return;
         }
         //尝试着将皇后放置在当前行中每一列
@@ -38,5 +45,19 @@ public class QueenN {
             }
         }
         return true;
+    }
+
+    public void print_table(int[] table) {
+        for (int row = 0; row < table.length; row++) {
+            for (int col = 0; col < N; col++) {
+                if (table[row] == col) {
+                    System.out.print(" [*] ");
+                } else {
+                    System.out.print(" [ ] ");
+                }
+            }
+            System.out.println();
+        }
+
     }
 }
